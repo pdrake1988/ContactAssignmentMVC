@@ -1,0 +1,38 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div id="contact-form" class="modal mx-auto" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add Contact</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form asp-controller="Home" asp-action="AddContact" method="post">
+                    <div class="justify-content-center">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" type="text"/>
+                        <label for="type">Type</label>
+                        <input id="type" name="Type" type="text" />
+                        <label for="employer">Employer</label>
+                        <input id="employer" name="Employer" type="text" />
+                        <label for="city">City</label>
+                        <input id="city" name="City" type="text" />
+                        <label for="adress">Address</label>
+                        <input id="address" name="Address" type="text" />
+                        <label for="phone-number">Phone Number</label>
+                        <input id="phone-number" name="phone-number" type="text" />
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>

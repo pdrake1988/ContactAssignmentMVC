@@ -1,0 +1,19 @@
+﻿@model IEnumerable<ContactInfo>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    <partial name="../shared/ContactForm.cshtml"/>
+    @foreach(ContactInfo contact in Model)
+    {
+        <div class="col-3 text-center">
+            <h1>@contact.Name</h1>
+            <p>@contact.Type</p>
+            <p>@contact.Employer</p>
+            <p>@contact.City</p>
+            <p>@contact.PhoneNumber</p>
+            <p>@contact.Address</p>
+        </div>
+    }
+</div>
